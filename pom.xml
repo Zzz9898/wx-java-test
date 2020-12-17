@@ -19,5 +19,51 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>wx-java-mp-spring-boot-starter</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-cp</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.31</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <wxMpAppId>wx2eb43a5677f2ec01</wxMpAppId>
+                <wxMpSecret>0b04070ce692c80bb8c8e7c690445758</wxMpSecret>
+                <wxMpToken>zhangjiaw</wxMpToken>
+                <wxOffiaccountSecret>0b04070ce692c80bb8c8e7c690445758</wxOffiaccountSecret>
+                <wxOffiaccountToken>zhangjiaw</wxOffiaccountToken>
+                <wxOffiaccountdomain>https://stu.zcoder.top/</wxOffiaccountdomain>
+                <wxCpcorpId>https://stu.zcoder.top/</wxCpcorpId>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
